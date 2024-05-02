@@ -1,0 +1,15 @@
+opam-version: "2.0"
+maintainer: "borisd@gmx.com"
+build: [
+  ["sh" "-c" "echo \"arch: \\\"${ARCH}\\\"\" >>conf-macos.config"]
+  ["sh" "-c" "echo \"subarch: \\\"${SUBARCH}\\\"\" >>conf-macos.config"]
+  ["sh" "-c" "echo \"platform: \\\"MacOSX\\\"\" >>conf-macos.config"]
+  ["sh" "-c" "echo \"sdk: \\\"${SDK}\\\"\" >>conf-macos.config"]
+  ["sh" "-c" "echo \"toolpref: \\\"${TOOLPREF}\\\"\" >>conf-macos.config"]
+  ["sh" "-c" "echo \"sysroot: \\\"${SDK_DIR}/MacOSX${SDK}.sdk\\\"\" >>conf-macos.config"]
+  ["sh" "-c" "echo \"cflags: \\\"-isysroot ${SDK_DIR}/MacOSX${SDK}.sdk -mmacos-version-min=${VER}\\\"\" >>conf-macos.config"]
+  ["sh" "-c" "echo \"ldflags: \\\"-Wl,-syslibroot,${SDK_DIR}/MacOSX${SDK}.sdk\\\"\" >>conf-macos.config"]
+  ["sh" "-c" "echo \"triple: \\\"${SUBARCH}-apple-darwin\\\"\" >>conf-macos.config"]
+  ["sh" "-c" "echo \"triplereal: \\\"${SUBARCH}-apple-darwin\\\"\" >>conf-macos.config"]
+]
+depends: ["ocaml"]
