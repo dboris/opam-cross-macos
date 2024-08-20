@@ -62,3 +62,8 @@ This project is based on [opam-cross-ios](https://github.com/ocaml-cross/opam-cr
 credit goes to its original developers. For further background and instructions how to
 port OCaml packages to macOS see
 [here](https://github.com/ocaml-cross/opam-cross-ios#porting-packages).
+
+Related Projects
+----------------
+
+See [OCamlPro/opam-cross-osx](https://github.com/OCamlPro/opam-cross-osx)
